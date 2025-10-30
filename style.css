@@ -1,0 +1,142 @@
+
+.h1-1{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+body {
+ background: #1ba7de;
+background: linear-gradient(89deg,rgba(27, 167, 222, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* so it starts from top */
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* add some spacing from top */
+}
+
+
+  .calculator {
+    width: 320px;
+    background: black;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .display {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .previous {
+    font-size: 1.2em;
+    color: #888;
+    min-height: 20px;
+  }
+
+  .current {
+    font-size: 3em;
+    font-weight: 300;
+    min-height: 40px;
+    word-wrap: break-word;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  button:active {
+    opacity: 0.7;
+  }
+
+  .gray {
+    background: #a5a5a5;
+    color: black;
+  }
+
+  .dark {
+    background: #333;
+  }
+
+  .orange {
+    background: #f1a33c;
+  }
+
+  .zero {
+    grid-column: span 2;
+    border-radius: 35px;
+    width: 100%;
+    text-align: left;
+    padding-left: 28px;
+  }
+
+
+
+  /* ✨ Responsive Design */
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+    border-radius: 25px;
+  }
+
+  button {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* keeps buttons circular */
+    font-size: 1.3em;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .current {
+    font-size: 2.5em;
+  }
+
+  .h1-1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  button {
+    font-size: 1.1em;
+  }
+
+  .current {
+    font-size: 2em;
+  }
+
+  .calculator {
+    padding: 10px;
+  }
+}
